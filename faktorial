@@ -1,21 +1,21 @@
-#include <iostream>
-using namespace std;
-long double faktorial(int n) {
-    if (n <= 1)
-        return 1;
-    else
-        return n * faktorial(n - 1);
+#include <iostream>                     // knihovna
+using namespace std;                    //pouziti standartnich jmen
+long double faktorial(int n) {          //zacatek funkce pridani integeru n
+    if (n <= 1)                         //podminka kdyz n bude mensi nebo rovno 
+        return 1;                       //vrati 1
+    else                                //jinak
+        return n * faktorial(n - 1);    //vrati rekurzi
 }
-int main() {
-    int chad;
-    cout << "Zadej cislo: ";
-    cin >> chad;
-    if (chad >= 0) {
-        cout << "Faktrorial: " << faktorial(chad);
+int main() {                            //zacatek hlavni funkce
+    int chad;                           //pridani integeru chad
+    cout << "Zadej cislo: ";            //vypis
+    cin >> chad;                        //prijem
+    if (chad >= 0) {                    //podminka jestli je vstup vetsi nebo roven nule  
+        cout << "Faktrorial: " << faktorial(chad);  //vypise hodnotu funkce
         return 0;
     }
-    else{
-        cout << "Zadej kladne cislo";
+    else{                               //jinak
+        cout << "Zadej kladne cislo";   //uzivatel zadal nekladne cislo a program konci
         return 0;
     }
 }
