@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+long double faktorial(int n) {
+    if (n <= 1)
+        return 1;
+    else
+        return n * faktorial(n - 1);
+}
+int main() {
+    int chad;
+    cout << "Zadej cislo: ";
+    cin >> chad;
+    if (chad >= 0) {
+        cout << "Faktrorial: " << faktorial(chad);
+        return 0;
+    }
+    else{
+        cout << "Zadej kladne cislo";
+        return 0;
+    }
+}
