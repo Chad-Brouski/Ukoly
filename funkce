@@ -1,0 +1,20 @@
+#include <iostream>		// knihovna
+using namespace std;	//pouziti standartnich jmen
+
+int REDUCTOR(int a, int b)  //zacatek funkce pridani integeru a, b
+{
+	if (a > b)		//kdyz a je vetsi nez b
+	return b;		//vrati b
+	else			//cokoli jineho
+	return a;		//vrati a
+}
+
+int main()		//zacatek hlavni funkce
+{
+	int chad, brouski;							//pridani integeru chad, brouski
+	int vysledek;								//pridani integeru vysledek
+	cin >> chad >> brouski;						//vstup od uzivatele do promenne chad a brouski
+	vysledek = REDUCTOR(chad, brouski);			//vysledek je prepsan na hodnotu funkce REDUCTOR
+	cout << "Mensi je: " << vysledek << endl;	//vypis uzivateli "Mensi je" hodnota vysledku a odradkovani
+	return 0;									//hlavni fukce vrati nulu
+}
